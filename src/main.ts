@@ -1,7 +1,7 @@
 // BearBang - Progressive Web App for bear deterrence
 // Replace the following URL with your actual GitHub raw audio file URL
 const REAL_AUDIO_URL = "https://github.com/ikegamidayo/bearbang101902/raw/refs/heads/main/public/audio/repeat_bang.mp3";
-const FALLBACK_AUDIO_URL = "/audio/repeat_bang.mp3";
+const FALLBACK_AUDIO_URL = `${import.meta.env.BASE_URL}audio/repeat_bang.mp3`;
 
 // Audio playback state
 let audioCtx: AudioContext | null = null;
@@ -197,20 +197,31 @@ window.addEventListener("load", () => {
   const hideSplash = () => splash.classList.add("hidden");
   setTimeout(hideSplash, 1500);
 
+  /**
+ * Service Worker registration and splash screen handling
+ * Registers SW for offline functionality and shows ready toast
+ */
+window.addEventListener("load", () => {
+  // Hide splash after timeout or when SW is ready
+  const hideSplash = () => splash.classList.add("hidden");
+  setTimeout(hideSplash, 1500);
+
   if ("serviceWorker" in navigator) {
+    // ← base に追従したパスで登録するのがポイント
+    const swPath = `${import.meta.env.BASE_URL}service-worker.js`;
+
     navigator.serviceWorker
-      .register("/service-worker.js")
+      .register(swPath)
       .then(async () => {
-        // Wait for service worker to be ready
+        // wait for service worker to be ready
         await navigator.serviceWorker.ready;
         hideSplash();
-
         // Show offline-ready toast
         toast.removeAttribute("hidden");
         setTimeout(() => toast.setAttribute("hidden", ""), 2000);
       })
       .catch(() => {
-        // Even if SW fails, hide splash
+        // Even if SW fails, hide splash eventually
         hideSplash();
       });
   } else {
