@@ -4,7 +4,7 @@
 const CACHE_NAME = "bearbang-v1";
 
 // Replace this with your actual GitHub raw audio file URL
-const REAL_AUDIO = "https://raw.githubusercontent.com/USER/REPO/BRANCH/repeat_bang.mp3";
+const REAL_AUDIO = "https://https://github.com/ikegamidayo/bearbang101902/raw/refs/heads/main/public/audio/repeat_bang.mp3";
 
 // All assets to precache for offline use
 // Paths with spaces are URL-encoded for safety
