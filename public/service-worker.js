@@ -1,7 +1,7 @@
 // BearBang Service Worker
 // Provides offline-first functionality with cache-first strategy
 
-const CACHE_NAME = "bearbang-v1";
+const CACHE_NAME = "bearbang-v2";
 
 // Replace this with your actual GitHub raw audio file URL
 const REAL_AUDIO = "https://https://github.com/ikegamidayo/bearbang101902/raw/refs/heads/main/public/audio/repeat_bang.mp3";
