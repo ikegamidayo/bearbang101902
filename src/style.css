@@ -22,7 +22,8 @@ img{max-width:100%;height:auto;display:block}
   padding:20px 0;
 }
 .header img{
-  width:min(60vw,360px); /* ← スマホ幅に応じて調整 */
+  width:min(138vw, 828px); /* 60vw → 138vwで約230%拡大 */
+  max-width:90%;
   height:auto;
 }
 
