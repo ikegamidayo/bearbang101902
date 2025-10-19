@@ -1,0 +1,24 @@
+{
+  "name": "BearBang",
+  "short_name": "BearBang",
+  "description": "Offline-first bear deterrence sound application",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#FFCC00",
+  "background_color": "#FFCC00",
+  "icons": [
+    {
+      "src": "/icons/bear%20icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/bear%20icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
