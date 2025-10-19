@@ -1,3 +1,4 @@
+import './style.css';
 // BearBang - Progressive Web App for bear deterrence
 // Replace the following URL with your actual GitHub raw audio file URL
 // GitHub Pagesのサブパス（/bearbang101902/）に自動追従させる
