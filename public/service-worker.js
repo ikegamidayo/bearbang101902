@@ -1,7 +1,7 @@
 // BearBang Service Worker
 // Provides offline-first functionality with cache-first strategy
 
-const CACHE_NAME = "bearbang-v5";
+const CACHE_NAME = "bearbang-v6";
 
 // Base path for GitHub Pages (important!)
 const BASE = "/bearbang101902";
