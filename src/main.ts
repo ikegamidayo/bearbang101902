@@ -1,6 +1,6 @@
 // BearBang - Progressive Web App for bear deterrence
 // Replace the following URL with your actual GitHub raw audio file URL
-const REAL_AUDIO_URL = "https://raw.githubusercontent.com/USER/REPO/BRANCH/repeat_bang.mp3";
+const REAL_AUDIO_URL = "https://github.com/ikegamidayo/bearbang101902/raw/refs/heads/main/public/audio/repeat_bang.mp3";
 const FALLBACK_AUDIO_URL = "/audio/repeat_bang.mp3";
 
 // Audio playback state
