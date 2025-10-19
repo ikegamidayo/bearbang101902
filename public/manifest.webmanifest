@@ -2,24 +2,15 @@
   "name": "BearBang",
   "short_name": "BearBang",
   "description": "Offline-first bear deterrence sound application",
-  "start_url": "/bearbang101902/",          // ← ここが重要
-  "scope": "/bearbang101902/",              // ← 追加（推奨）
+  "start_url": "/bearbang101902/",
+  "scope": "/bearbang101902/",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#FFCC00",
   "background_color": "#FFCC00",
   "icons": [
-    {
-      "src": "/bearbang101902/icons/bear%20icon.png",   // ← ここが重要
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/bearbang101902/icons/bear%20icon.png",   // maskable も同じ画像でOK
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
-    }
+    { "src": "/bearbang101902/icons/bear-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/bearbang101902/icons/bear-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/bearbang101902/icons/bear-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
