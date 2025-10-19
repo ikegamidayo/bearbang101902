@@ -192,30 +192,23 @@ volInput.addEventListener("input", () => {
  * Service Worker registration and splash screen handling
  * Registers SW for offline functionality and shows ready toast
  */
-window.addEventListener("load", () => {
-  // Hide splash after timeout or when SW is ready
-  const hideSplash = () => splash.classList.add("hidden");
-  setTimeout(hideSplash, 1500);
-
-  /**
- * Service Worker registration and splash screen handling
- * Registers SW for offline functionality and shows ready toast
- */
+// --- Service Worker registration and splash screen handling ---
 window.addEventListener("load", () => {
   // Hide splash after timeout or when SW is ready
   const hideSplash = () => splash.classList.add("hidden");
   setTimeout(hideSplash, 1500);
 
   if ("serviceWorker" in navigator) {
-    // ← base に追従したパスで登録するのがポイント
+    // ← base に追従したパスで登録
     const swPath = `${import.meta.env.BASE_URL}service-worker.js`;
 
     navigator.serviceWorker
       .register(swPath)
       .then(async () => {
-        // wait for service worker to be ready
+        // wait for SW to be ready
         await navigator.serviceWorker.ready;
         hideSplash();
+
         // Show offline-ready toast
         toast.removeAttribute("hidden");
         setTimeout(() => toast.setAttribute("hidden", ""), 2000);
