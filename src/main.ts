@@ -16,7 +16,6 @@ let wakeLock: any = null;
 const $ = (s: string) => document.querySelector(s)! as HTMLElement;
 const startBtn = $("#startBtn") as HTMLButtonElement;
 const stopBtn = $("#stopBtn") as HTMLButtonElement;
-const testBtn = $("#testBtn") as HTMLButtonElement;
 const volInput = $("#vol") as HTMLInputElement;
 const splash = $("#splash");
 const toast = $("#toast");
@@ -168,16 +167,6 @@ stopBtn.addEventListener("click", () => {
  * TEST button handler
  * Plays audio once without looping
  */
-testBtn.addEventListener("click", async () => {
-  await ensureContext();
-
-  if (!buffer) await loadBuffer();
-
-  const oneshot = audioCtx!.createBufferSource();
-  oneshot.buffer = buffer!;
-  oneshot.connect(gain!);
-  oneshot.start(0);
-});
 
 /**
  * Volume slider handler
